@@ -16,7 +16,7 @@ cli
 cli
   .command('list [owner]', 'Show all available templates')
   .alias('ls')
-  .action(() => console.log('manager'))
+  .action(() => console.log('- manager'))
 
 cli.help().version(version).parse()
 
