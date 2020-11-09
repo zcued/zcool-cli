@@ -1,23 +1,23 @@
 {
-  "name": "zcli",
+  "name": "zcool-cli",
   "version": "0.0.1",
   "description": "A simple template generator for zcool",
   "main": "src/index.js",
-  "bin": "bin/zcli.js",
+  "bin": "bin/zcool-cli.js",
   "keywords": [
     "zcool",
     "cli"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zcued/zcli.git"
+    "url": "git+https://github.com/zcued/zcool-cli.git"
   },
   "author": "Martin0809",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zcued/zcli/issues"
+    "url": "https://github.com/zcued/zcool-cli/issues"
   },
-  "homepage": "https://github.com/zcued/zcli#readme",
+  "homepage": "https://github.com/zcued/zcool-cli#readme",
   "files": [
     "bin/",
     "src/",

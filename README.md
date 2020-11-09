@@ -1,4 +1,4 @@
-# zcli
+# zcool-cli
 
 一个简单的模版生成器。
 
@@ -7,7 +7,7 @@
 下载一个模版到指定目录。
 
 ```sh
-$ npx zcli [template] <project>
+$ npx zcool-cli [template] <project>
 ```
 
 ## 可用模版
@@ -15,7 +15,7 @@ $ npx zcli [template] <project>
 获取可用模版。
 
 ```sh
-$ npx zcli ls
+$ npx zcool-cli ls
 ```
 
 ## 例子
@@ -23,29 +23,29 @@ $ npx zcli ls
 使用 zcued 中的模版。默认 `zcued/template-${name}`。
 
 ```sh
-$ npx zcli manager demo
+$ npx zcool-cli manager demo
 ```
 
 使用具体的仓库。`${owner}/${name}`。
 
 ```sh
-$ npx zcli zcued/template-manager demo
+$ npx zcool-cli zcued/template-manager demo
 ```
 
 使用具体的分支。默认使用 `main`。
 
 ```sh
-$ npx zcli manager#main demo
+$ npx zcool-cli manager#main demo
 ```
 
 使用 http 链接下载 zip。
 
 ```sh
-$ npx zcli https://github.com/zcued/template-manager/archive/main.zip demo
+$ npx zcool-cli https://github.com/zcued/template-manager/archive/main.zip demo
 ```
 
 使用本地模版。
 
 ```sh
-$ npx zcli ./manager demo
+$ npx zcool-cli ./manager demo
 ```

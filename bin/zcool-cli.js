@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const cac = require('cac')
-const { init } = require('..')
+const { init } = require('../src')
 const { name, version } = require('../package.json')
 
 const cli = cac(name)
