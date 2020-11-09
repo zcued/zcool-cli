@@ -1,0 +1,24 @@
+{
+  "name": "zcli",
+  "version": "0.0.1",
+  "description": "A simple template generator for zcool",
+  "main": "src/index.js",
+  "bin": "bin/zcli.js",
+  "keywords": [
+    "zcool",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cac": "^6.6.1",
+    "env-paths": "^2.2.0",
+    "extract-zip": "^2.0.1",
+    "node-fetch": "^2.6.1",
+    "ora": "^5.1.0",
+    "prompts": "^2.4.0"
+  }
+}
