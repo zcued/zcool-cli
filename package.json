@@ -8,8 +8,23 @@
     "zcool",
     "cli"
   ],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zcued/zcli.git"
+  },
+  "author": "Martin0809",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zcued/zcli/issues"
+  },
+  "homepage": "https://github.com/zcued/zcli#readme",
+  "files": [
+    "bin/",
+    "src/",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
