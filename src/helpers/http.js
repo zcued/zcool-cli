@@ -19,7 +19,7 @@ const request = async (url, init) => {
 
   if (response.ok) return response
 
-  throw Error(`[ERROR] Unexpected response: ${response.statusText}`)
+  throw Error(`Unexpected response: ${response.statusText}`)
 }
 
 /**

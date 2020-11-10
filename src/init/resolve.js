@@ -59,7 +59,7 @@ module.exports = async (ctx) => {
     spinner.stop()
 
     throw new Error(
-      `[ERROR] Failed to pull \`${ctx.template}\` template: ${err.message}.`
+      `Failed to pull \`${ctx.template}\` template: ${err.message}.`
     )
   }
 

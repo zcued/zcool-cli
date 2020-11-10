@@ -15,6 +15,20 @@ middleware.use(resolve)
 middleware.use(load)
 // 执行模版中的命令行交互
 middleware.use(inquire)
+// 模版初始化配置
+// middleware.use(setup)
+// 准备需要处理的文件
+// middleware.use(prepare)
+// 模版文件名重命名
+// middleware.use(rename)
+// 渲染模版
+// middleware.use(render)
+// 输出文件
+// middleware.use(emit)
+// npm install
+// creator.use(install)
+// git init
+// creator.use(init)
 // 完成
 middleware.use(complete)
 

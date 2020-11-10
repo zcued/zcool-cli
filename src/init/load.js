@@ -11,7 +11,7 @@ module.exports = (ctx) => {
 
     return ctx
   } catch (err) {
-    err.message = `[ERROR] Invalid template: ${err.message}`
+    err.message = `Invalid template: ${err.message}`
 
     throw err
   }

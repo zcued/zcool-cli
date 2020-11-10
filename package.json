@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "cac": "^6.6.1",
+    "chalk": "^4.1.0",
     "env-paths": "^2.2.0",
     "extract-zip": "^2.0.1",
     "node-fetch": "^2.6.1",
