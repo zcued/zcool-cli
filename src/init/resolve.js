@@ -27,7 +27,11 @@ const getTemplateUrl = (template) => {
 
 module.exports = async (ctx) => {
   // 本地模版
-  if (/^[./]/.test(ctx.template)) return (ctx.src = ctx.template)
+  if (/^[./]/.test(ctx.template)) {
+    ctx.src = path.resolve(ctx.template)
+
+    return ctx
+  }
 
   // 远程模版
   const url = getTemplateUrl(ctx.template)
