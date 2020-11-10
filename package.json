@@ -33,6 +33,7 @@
     "chalk": "^4.1.0",
     "env-paths": "^2.2.0",
     "extract-zip": "^2.0.1",
+    "fast-glob": "^3.2.4",
     "node-fetch": "^2.6.1",
     "ora": "^5.1.0",
     "prompts": "^2.4.0"

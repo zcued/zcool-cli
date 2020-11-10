@@ -3,6 +3,7 @@ const confirm = require('./confirm')
 const resolve = require('./resolve')
 const load = require('./load')
 const inquire = require('./inquire')
+const prepare = require('./prepare')
 const complete = require('./complete')
 
 const middleware = new Middleware()
@@ -18,7 +19,7 @@ middleware.use(inquire)
 // 模版初始化配置
 // middleware.use(setup)
 // 准备需要处理的文件
-// middleware.use(prepare)
+middleware.use(prepare)
 // 模版文件名重命名
 // middleware.use(rename)
 // 渲染模版

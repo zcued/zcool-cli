@@ -108,6 +108,10 @@ const extract = async (src, dest, strip) => {
   })
 }
 
+const read = async (src) => {
+  return await fs.promises.readFile(src)
+}
+
 module.exports = {
   exists,
   isFile,
@@ -115,4 +119,5 @@ module.exports = {
   isEmpty,
   remove,
   extract,
+  read,
 }
