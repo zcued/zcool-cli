@@ -27,6 +27,30 @@ const exists = async (dest) => {
 }
 
 /**
+ * 判断输入路径是否为文件
+ *
+ * @param {string} dest
+ * @returns {boolean}
+ */
+const isFile = async (dest) => {
+  const result = await exists(dest)
+
+  return result === 'file'
+}
+
+/**
+ * 判断输入路径是否为文件夹
+ *
+ * @param {string} dest
+ * @returns {boolean}
+ */
+const isDirectory = async (dest) => {
+  const result = await exists(dest)
+
+  return result === 'dir'
+}
+
+/**
  * 判断文件夹是否为空
  *
  * @param {string} dest
@@ -70,7 +94,6 @@ const remove = async (dest, options) => {
  * @param {number} strip
  */
 const extract = async (src, dest, strip) => {
-  console.log('解压 zip 文件')
   await extractZip(src, {
     dir: dest,
     onEntry: (entry) => {
@@ -87,6 +110,8 @@ const extract = async (src, dest, strip) => {
 
 module.exports = {
   exists,
+  isFile,
+  isDirectory,
   isEmpty,
   remove,
   extract,

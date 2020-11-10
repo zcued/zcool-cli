@@ -1,3 +1,5 @@
+const path = require('path')
+const crypto = require('crypto')
 const ora = require('ora')
 const config = require('../helpers/config')
 const http = require('../helpers/http')
@@ -29,16 +31,22 @@ module.exports = async (ctx) => {
 
   // 远程模版
   const url = getTemplateUrl(ctx.template)
+  // 根据 url 生成 hash 值
+  const hash = crypto.createHash('md5').update(url).digest('hex').substr(8, 16)
+
+  ctx.src = path.join(config.paths.cache, hash)
+
+  // 如果 cache 路径已存在，则删除
+  if (await file.isDirectory(ctx.src)) await file.remove(ctx.src)
 
   const spinner = ora('Downloading template...').start()
 
   try {
     // 下载远程模版 zip
     const zip = await http.download(url)
-    console.log(zip)
 
-    // 解压远程模版
-    await file.extract(zip, ctx.dest, 1)
+    // 解压远程模版到 cache 目录
+    await file.extract(zip, ctx.src, 1)
     // 删除临时文件
     await file.remove(zip)
 
