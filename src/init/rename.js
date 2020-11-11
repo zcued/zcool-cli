@@ -1,5 +1,5 @@
 module.exports = (ctx) => {
-  const regexp = /{(.*?)}/g
+  const regexp = /{(.+?)}/g
 
   ctx.files.forEach((file) => {
     if (regexp.test(file.path)) {

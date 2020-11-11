@@ -5,6 +5,8 @@ const load = require('./load')
 const inquire = require('./inquire')
 const prepare = require('./prepare')
 const rename = require('./rename')
+const render = require('./render')
+const emit = require('./emit')
 const complete = require('./complete')
 
 const middleware = new Middleware()
@@ -23,10 +25,10 @@ middleware.use(inquire)
 middleware.use(prepare)
 // 替换文件名中的模版字符串
 middleware.use(rename)
-// 渲染模版
-// middleware.use(render)
+// 替换文件中的模版字符串
+middleware.use(render)
 // 输出文件
-// middleware.use(emit)
+middleware.use(emit)
 // npm install
 // creator.use(install)
 // git init

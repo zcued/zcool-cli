@@ -63,6 +63,16 @@ const isEmpty = async (dest) => {
 }
 
 /**
+ * 创建文件夹
+ *
+ * @param {string} dest
+ * @param {*} options
+ */
+const mkdir = async (dest, options) => {
+  await fs.promises.mkdir(dest, { recursive: true, ...options })
+}
+
+/**
  * 删除文件夹以及内容
  *
  * @param {string} dest
@@ -86,6 +96,7 @@ const remove = async (dest, options) => {
 
   await fs.promises.rmdir(dest, options)
 }
+
 /**
  * 解压 zip 文件
  *
@@ -118,12 +129,26 @@ const read = async (src) => {
   return await fs.promises.readFile(src)
 }
 
+/**
+ * 写入文件内容
+ *
+ * @param {string} dest
+ * @param {*} data
+ * @returns
+ */
+const write = async (dest, data) => {
+  await mkdir(path.dirname(dest))
+  await fs.promises.writeFile(dest, data)
+}
+
 module.exports = {
   exists,
   isFile,
   isDirectory,
   isEmpty,
+  mkdir,
   remove,
   extract,
   read,
+  write,
 }
