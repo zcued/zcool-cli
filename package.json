@@ -1,6 +1,6 @@
 {
   "name": "zcool-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple template generator for zcool",
   "main": "src/index.js",
   "bin": "bin/zcool-cli.js",
