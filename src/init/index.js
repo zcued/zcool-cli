@@ -7,6 +7,7 @@ const prepare = require('./prepare')
 const rename = require('./rename')
 const render = require('./render')
 const emit = require('./emit')
+const init = require('./init')
 const complete = require('./complete')
 
 const middleware = new Middleware()
@@ -32,7 +33,7 @@ middleware.use(emit)
 // npm install
 // creator.use(install)
 // git init
-// creator.use(init)
+middleware.use(init)
 // 完成
 middleware.use(complete)
 

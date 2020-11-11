@@ -14,6 +14,8 @@ const fallback = (ctx) => {
 }
 
 module.exports = async (ctx) => {
+  console.clear()
+
   if (!ctx.config.complete) {
     // 使用默认方法
     await fallback(ctx)

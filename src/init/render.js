@@ -7,7 +7,6 @@ module.exports = (ctx) => {
         .toString()
         .replace(regexp, (_, key) => ctx.answers[key])
 
-      console.log(content)
       file.content = Buffer.from(content)
     }
   })
