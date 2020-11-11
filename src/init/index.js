@@ -3,6 +3,11 @@ const confirm = require('./confirm')
 const resolve = require('./resolve')
 const load = require('./load')
 const inquire = require('./inquire')
+const prepare = require('./prepare')
+const rename = require('./rename')
+const render = require('./render')
+const emit = require('./emit')
+const init = require('./init')
 const complete = require('./complete')
 
 const middleware = new Middleware()
@@ -15,6 +20,20 @@ middleware.use(resolve)
 middleware.use(load)
 // 执行模版中的命令行交互
 middleware.use(inquire)
+// 模版初始化配置
+// middleware.use(setup)
+// 准备需要处理的文件
+middleware.use(prepare)
+// 替换文件名中的模版字符串
+middleware.use(rename)
+// 替换文件中的模版字符串
+middleware.use(render)
+// 输出文件
+middleware.use(emit)
+// npm install
+// creator.use(install)
+// git init
+middleware.use(init)
 // 完成
 middleware.use(complete)
 

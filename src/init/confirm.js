@@ -12,7 +12,7 @@ module.exports = async (ctx) => {
 
   // dest 不是文件夹
   if (exists !== 'dir')
-    throw new Error(`[ERROR] Cannot create ${ctx.project}: File exists.`)
+    throw new Error(`Cannot create ${ctx.project}: File exists.`)
 
   // dest 是空文件夹
   if (await file.isEmpty(ctx.dest)) return ctx
@@ -46,7 +46,7 @@ module.exports = async (ctx) => {
 
   // 取消操作
   if (choose == null || choose === 'cancel')
-    throw new Error('[ERROR] You have cancelled this task.')
+    throw new Error('You have cancelled this task.')
 
   // 覆盖操作
   if (choose === 'overwrite') await file.remove(ctx.dest)

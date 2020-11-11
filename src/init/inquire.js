@@ -31,6 +31,7 @@ module.exports = async (ctx) => {
 
   // 处理 prompt 默认值
   ctx.config.prompts.forEach(processor(ctx))
+  console.clear()
 
   const onCancel = () => {
     throw new Error('You have cancelled this task.')
