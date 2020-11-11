@@ -4,6 +4,7 @@ const resolve = require('./resolve')
 const load = require('./load')
 const inquire = require('./inquire')
 const prepare = require('./prepare')
+const rename = require('./rename')
 const complete = require('./complete')
 
 const middleware = new Middleware()
@@ -20,8 +21,8 @@ middleware.use(inquire)
 // middleware.use(setup)
 // 准备需要处理的文件
 middleware.use(prepare)
-// 模版文件名重命名
-// middleware.use(rename)
+// 替换文件名中的模版字符串
+middleware.use(rename)
 // 渲染模版
 // middleware.use(render)
 // 输出文件

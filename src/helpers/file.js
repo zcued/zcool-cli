@@ -108,6 +108,12 @@ const extract = async (src, dest, strip) => {
   })
 }
 
+/**
+ * 读取文件内容
+ *
+ * @param {string} src
+ * @returns
+ */
 const read = async (src) => {
   return await fs.promises.readFile(src)
 }
